@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+ "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+ "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+
+<hibernate-configuration>
+
+    <session-factory>
+
+
+        <property name="hibernate.connection.provider_class">org.hibernate.connection.ProxoolConnectionProvider</property>
+
+
+        <property name="hibernate.proxool.pool_alias">DBPool</property>
+
+        
+        <property name="hibernate.proxool.xml">proxool.xml</property>
+
+
+        
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+
+        <!-- ### <property name="hibernate.proxool.existing_pool">true</property> 
+            ########### -->
+        <!-- ### Echo all executed SQL to stdout ########## -->
+
+
+        <property name="show_sql">true</property>
+         <mapping class="com.homework2.po.User" />  
+
+    </session-factory>
+
+</hibernate-configuration>
